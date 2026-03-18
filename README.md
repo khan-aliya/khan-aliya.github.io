@@ -1,4 +1,5 @@
 # khan-aliya.github.io
+<<<<<<< HEAD
 
 My personal corner on the web.  
 A portfolio showcasing who I am, what I build, and what I'm learning.
@@ -49,3 +50,6 @@ banking into software development.
 **Aliya Khan**  
 Front-End Developer · MSc Computer Science Student  
 [khan-aliya.github.io](https://khan-aliya.github.io)
+=======
+My personal corner on the web. A portfolio showcasing who I am, what I build, and what I’m learning.
+>>>>>>> f8374a84c9208166de9e8475595ec39e87d7eaab
