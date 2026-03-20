@@ -1,0 +1,131 @@
+/* ========================
+   1. VARIABLES
+   ======================== */
+
+:root {
+    /* Backgrounds */
+    --bg-page: #F8F9FC;
+    --bg-card: #FFFFFF;
+
+    /* Text */
+    --text-heading: #1E1E2E;
+    --text-body: #374151;
+    --text-muted: #6B7280;
+
+    /* Accent */
+    --accent: #5B6EE8;
+    --accent-hover: #3D50D4;
+    --accent-light: #EEF0FD;
+
+    /* Borders */
+    --border: #E5E7EB;
+
+    /* Spacing */
+    --section-padding: 80px 0;
+    --container-width: 1100px;
+
+    /* Border radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================
+   2. RESET & BASE
+   ======================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================
+   3. TYPOGRAPHY
+   ======================== */
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-heading);
+    line-height: 1.2;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+    color: var(--text-body);
+    line-height: 1.7;
+}
+
+/* ========================
+   4. NAVBAR
+   ======================== */
+
+/* ========================
+   5. HERO
+   ======================== */
+
+/* ========================
+   6. SKILLS
+   ======================== */
+
+/* ========================
+   7. PROJECTS
+   ======================== */
+
+/* ========================
+   8. EXPERIENCE
+   ======================== */
+
+/* ========================
+   9. EDUCATION
+   ======================== */
+
+/* ========================
+   10. CERTIFICATIONS
+   ======================== */
+
+/* ========================
+   11. CONTACT
+   ======================== */
+
+/* ========================
+   12. UTILITIES
+   ======================== */
