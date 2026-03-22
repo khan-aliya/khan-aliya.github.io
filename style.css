@@ -161,6 +161,14 @@ p {
 .nav-links li a:hover::after {
     width: 100%;
 }
+.nav-links li a.active {
+    color: var(--accent);
+}
+
+.nav-links li a.active::after {
+    width: 100%;
+}
+
 
 /* ========================
    5. HERO
@@ -726,6 +734,111 @@ p {
 /* ========================
    11. CONTACT
    ======================== */
+
+.contact {
+    min-height: 400px;
+    background-color: var(--text-heading);
+    padding: 40px 0 30px;
+}
+
+.contact-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.contact-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+    background-color: var(--accent);
+}
+
+.contact-subtext {
+    font-size: 0.95rem;
+    color: #9CA3AF;
+    max-width: 480px;
+    line-height: 1.7;
+    margin-top: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 480px;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.contact-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent);
+    transform: translateX(6px);
+}
+
+.contact-item img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    filter: invert(1);
+}
+
+.contact-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    min-width: 60px;
+}
+
+.contact-value {
+    font-size: 0.92rem;
+    color: #D1D5DB;
+    transition: color 0.2s ease;
+}
+
+.contact-item:hover .contact-value {
+    color: #ffffff;
+}
+
+.contact-footer-note {
+    font-size: 0.8rem;
+    color: #6B7280;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    text-align: center;
+}
 
 /* ========================
    12. UTILITIES
