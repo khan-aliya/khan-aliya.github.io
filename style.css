@@ -431,6 +431,103 @@ p {
    8. EXPERIENCE
    ======================== */
 
+.experience {
+    padding: var(--section-padding);
+    background-color: var(--bg-card);
+}
+
+.experience-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.experience-container h2 {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    color: var(--text-heading);
+    position: relative;
+}
+
+.experience-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+    background-color: var(--accent);
+}
+
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experience-card {
+    background-color: var(--bg-page);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.experience-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.experience-header {
+    margin-bottom: 1.25rem;
+}
+
+.experience-header h3 {
+    font-size: 1.15rem;
+    color: var(--text-heading);
+    margin-bottom: 0.35rem;
+}
+
+.experience-header .company {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+}
+
+.experience-header .company-note {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 0.35rem;
+    font-style: italic;
+}
+
+.experience-header .duration {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.experience-points {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-left: 1.25rem;
+    list-style: disc;
+}
+
+.experience-points li {
+    font-size: 0.92rem;
+    color: var(--text-body);
+    line-height: 1.7;
+}
+
+.experience-points li::marker {
+    color: var(--accent);
+}
+
 /* ========================
    9. EDUCATION
    ======================== */
