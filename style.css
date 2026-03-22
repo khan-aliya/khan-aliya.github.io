@@ -278,7 +278,7 @@ p {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 1.5rem;
 }
 
@@ -350,7 +350,7 @@ p {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -645,6 +645,83 @@ p {
 /* ========================
    10. CERTIFICATIONS
    ======================== */
+
+.certifications {
+    padding: var(--section-padding);
+    background-color: var(--bg-card);
+}
+
+.certifications-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.certifications-container h2 {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    color: var(--text-heading);
+    position: relative;
+}
+
+.certifications-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+    background-color: var(--accent);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.certification-card {
+    background-color: var(--bg-page);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+}
+
+.certification-icon {
+    font-size: 2rem;
+    width: 56px;
+    height: 56px;
+    background-color: var(--accent-light);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.certification-info h3 {
+    font-size: 1rem;
+    color: var(--text-heading);
+    margin-bottom: 0.3rem;
+}
+
+.certification-info .certification-issuer {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
 
 /* ========================
    11. CONTACT
