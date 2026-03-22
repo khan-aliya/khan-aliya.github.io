@@ -3,7 +3,7 @@
 // ========================
 
 const sections = document.querySelectorAll('section[id], footer[id]');
-const navLinks = document.querySelectorAll('.nav-links li a');
+const AllNavLinks = document.querySelectorAll('.nav-links li a');
 
 const observerOptions = {
     root: null,
@@ -16,7 +16,7 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const activeId = entry.target.id;
 
-            navLinks.forEach(link => {
+            AllNavLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${activeId}`) {
                     link.classList.add('active');
@@ -27,3 +27,24 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 sections.forEach(section => observer.observe(section));
+
+
+// ========================
+// Hamburger menu
+// ========================
+
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+});
+
+// Close menu when a nav link is clicked
+AllNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+    });
+});

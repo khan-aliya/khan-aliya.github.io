@@ -86,7 +86,7 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 
-h1 { font-size: 3.5rem; }
+h1 { font-size: 4rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.25rem; }
 
@@ -99,7 +99,7 @@ p {
    4. NAVBAR
    ======================== */
 
-   .navbar {
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -125,6 +125,10 @@ p {
 
 .nav-logo:hover {
     color: var(--accent-hover);
+}
+
+.hamburger {
+    display: none;
 }
 
 .nav-links ul {
@@ -206,7 +210,6 @@ p {
 }
 
 .hero-text h1 {
-    font-size: 4rem;
     color: var(--text-heading);
     margin-bottom: 0.5rem;
     line-height: 1.1;
@@ -268,7 +271,6 @@ p {
 .skills-container h2 {
     text-align: center;
     margin-bottom: 5rem;
-    font-size: 2rem;
     color: var(--text-heading);
     position: relative;
 }
@@ -340,7 +342,6 @@ p {
 .projects-container h2 {
     text-align: center;
     margin-bottom: 5rem;
-    font-size: 2rem;
     color: var(--text-heading);
     position: relative;
 }
@@ -453,7 +454,6 @@ p {
 .experience-container h2 {
     text-align: center;
     margin-bottom: 5rem;
-    font-size: 2rem;
     color: var(--text-heading);
     position: relative;
 }
@@ -554,7 +554,6 @@ p {
 .education-container h2 {
     text-align: center;
     margin-bottom: 5rem;
-    font-size: 2rem;
     color: var(--text-heading);
     position: relative;
 }
@@ -668,7 +667,6 @@ p {
 .certifications-container h2 {
     text-align: center;
     margin-bottom: 5rem;
-    font-size: 2rem;
     color: var(--text-heading);
     position: relative;
 }
@@ -709,8 +707,8 @@ p {
 
 .certification-icon {
     font-size: 2rem;
-    width: 56px;
-    height: 56px;
+    width: 36px;
+    height: 36px;
     background-color: var(--accent-light);
     border-radius: var(--radius-md);
     display: flex;
@@ -732,7 +730,7 @@ p {
 }
 
 /* ========================
-   11. CONTACT
+   11. FOOTER - CONTACT
    ======================== */
 
 .contact {
@@ -752,7 +750,6 @@ p {
 }
 
 .contact-container h2 {
-    font-size: 2rem;
     color: #ffffff;
     margin-bottom: 1rem;
     position: relative;
@@ -876,3 +873,208 @@ p {
     background-color: var(--accent);
     color: #ffffff;
 }
+
+/* ========================
+   13. RESPONSIVE
+   ======================== */
+
+/* ======= TABLET — 768px ======= */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: var(--text-heading);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-links {
+        position: fixed;
+        height: calc(100vh - 70px);
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-card);        
+        display: none;
+    }
+    .nav-links ul {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: end;
+        padding: 2rem;
+        flex: 1;
+    }
+    .nav-links ul li a {
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+
+    /* Hero */
+
+    .hero-container {
+        padding: 3rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .hero-text p:last-of-type {
+        margin: 0 auto 1rem;
+    }
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+    .hero-text h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 260px;
+        height: 260px;
+    }
+
+    /* Utilities - buttons */
+
+    .btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    /* Section headings */
+    .skills-container h2,
+    .projects-container h2,
+    .experience-container h2,
+    .education-container h2,
+    .certifications-container h2 {
+        font-size: 1.75rem;
+        margin-bottom: 3rem;
+    }
+    :root {
+
+        /* Spacing */
+    --section-padding: 30px 0 50px;
+    }
+
+    /* Footer - Contact */
+    .contact-container h2 {
+        font-size: 1.75rem;
+    }
+}
+
+
+
+/* ======= MOBILE — 480px ======= */
+
+@media (max-width: 480px) {
+
+    /* Hero */
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Utilities - buttons */
+
+    .btn {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.80rem;
+    }
+
+    /* Section headings */
+    .skills-container h2,
+    .projects-container h2,
+    .experience-container h2,
+    .education-container h2,
+    .certifications-container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+    :root {
+
+        /* Spacing */
+    --section-padding: 20px 0 40px;
+    }
+
+    /* Cards */
+    .experience-card,
+    .education-card,
+    .certification-card {
+        padding: 1.25rem;
+    }
+
+    /* Footer - Contact */
+
+    .contact {
+        padding-top: 20px;
+    }
+    .contact-item {
+        padding: 0.6rem 1rem;
+    }
+    .contact-container h2 {
+        font-size: 1.5rem;
+    }
+    .contact-subtext {
+        font-size: 0.875rem;
+    }
+    .contact-value {
+        font-size: 0.82rem;
+    }
+    .contact-footer-note {
+        font-size: 0.75rem;
+    }
+    .contact-links {
+        max-width: 100%;
+    }
+    .contact-item {
+        flex-wrap: wrap;
+    }
+}
+
