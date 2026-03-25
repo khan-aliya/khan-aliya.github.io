@@ -39,6 +39,8 @@ const navLinks = document.querySelector('.nav-links');
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
     navLinks.classList.toggle('open');
+    const isOpen = hamburger.classList.contains('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
 });
 
 // Close menu when a nav link is clicked
@@ -46,6 +48,7 @@ AllNavLinks.forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('open');
         navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
     });
 });
 
@@ -55,3 +58,9 @@ hamburger.addEventListener('click', () => {
     const isOpen = hamburger.classList.contains('open');
     hamburger.setAttribute('aria-expanded', isOpen);
 });
+
+// =========================
+// Copyright year
+// =========================
+
+document.querySelector('.contact-footer-note span').textContent = new Date().getFullYear();
