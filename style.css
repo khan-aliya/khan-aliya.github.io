@@ -123,7 +123,8 @@ p {
     letter-spacing: 0.02em;
 }
 
-.nav-logo:hover {
+.nav-logo:hover,
+.nav-logo:focus-visible {
     color: var(--accent-hover);
 }
 
@@ -158,11 +159,13 @@ p {
     transition: width 0.2s ease;
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover,
+.nav-links li a:focus-visible {
     color: var(--accent);
 }
 
-.nav-links li a:hover::after {
+.nav-links li a:hover::after,
+.nav-links li a:focus-visible::after {
     width: 100%;
 }
 .nav-links li a.active {
@@ -305,7 +308,8 @@ p {
     cursor: default;
 }
 
-.skill-card:hover {
+.skill-card:hover,
+.skill-card:focus-visible {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
     border-color: var(--accent);
@@ -374,7 +378,8 @@ p {
     transition: all 0.2s ease;
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card:focus-visible {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
     border-color: var(--accent);
@@ -432,7 +437,8 @@ p {
     gap: 0.4rem;
 }
 
-.project-links a:hover {
+.project-links a:hover,
+.project-links a:focus-visible {
     color: var(--accent-hover);
 }
 
@@ -484,7 +490,8 @@ p {
     transition: box-shadow 0.2s ease;
 }
 
-.experience-card:hover {
+.experience-card:hover,
+.experience-card:focus-visible {
     box-shadow: var(--shadow-md);
 }
 
@@ -584,7 +591,8 @@ p {
     transition: box-shadow 0.2s ease;
 }
 
-.education-card:hover {
+.education-card:hover,
+.education-card:focus-visible {
     box-shadow: var(--shadow-md);
 }
 
@@ -699,7 +707,8 @@ p {
     transition: all 0.2s ease;
 }
 
-.certification-card:hover {
+.certification-card:hover,
+.certification-card:focus-visible {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
     border-color: var(--accent);
@@ -796,7 +805,8 @@ p {
     text-decoration: none;
 }
 
-.contact-item:hover {
+.contact-item:hover,
+.contact-item:focus-visible {
     background-color: rgba(255, 255, 255, 0.08);
     border-color: var(--accent);
     transform: translateX(6px);
@@ -824,7 +834,8 @@ p {
     transition: color 0.2s ease;
 }
 
-.contact-item:hover .contact-value {
+.contact-item:hover .contact-value,
+.contact-item:focus-visible .contact-value {
     color: #ffffff;
 }
 
@@ -858,7 +869,8 @@ p {
     border: 2px solid var(--accent);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus-visible {
     background-color: var(--accent-hover);
     border-color: var(--accent-hover);
 }
@@ -869,7 +881,8 @@ p {
     border: 2px solid var(--accent);
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
     background-color: var(--accent);
     color: #ffffff;
 }
@@ -1075,6 +1088,22 @@ p {
     }
     .contact-item {
         flex-wrap: wrap;
+    }
+}
+
+
+/* ========================
+   14. REDUCED MOTION
+   ======================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
 

@@ -10,9 +10,9 @@
 <body>
              <!-- +++++++++++ Navigation Bar +++++++++++ -->
 
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
                 <a href="#hero" class="nav-logo">Aliya Khan</a>
-                <button class="hamburger" aria-label="Toggle navigation menu">
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                      <span></span>
                      <span></span>
                      <span></span>
@@ -41,11 +41,11 @@
                 <p>Front-End Developer with a background in banking. Currently completing my MSc in Computer Science at the University of Wolverhampton.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#" class="btn btn-secondary">Contact Me</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="" alt="Aliya Khan">
+                <img src="" alt="Aliya Khan - Front-End Developer">
             </div>
         </div>
     </section>
@@ -101,8 +101,8 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="#" target="_blank">GitHub</a>
-                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="https://github.com/khan-aliya/khan-aliya.github.io" target="_blank" rel="noopener noreferrer" aria-label="View Project-1 on GitHub, opens in new tab">GitHub</a>.  <!-- Change the aria-label after adding projects -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View live demo of Project-1, opens in new tab">Live Demo</a>                              <!-- Change the aria-label after adding projects -->
                     </div>
                 </div>
                 <div class="project-card">
@@ -116,8 +116,8 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="#" target="_blank">GitHub</a>
-                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View Project-2 on GitHub, opens in new tab">GitHub</a>        <!-- Change the aria-label after adding projects -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View live demo of Project-2, opens in new tab">Live Demo</a>      <!-- Change the aria-label after adding projects -->
                     </div>
                 </div>
                 <div class="project-card">
@@ -131,8 +131,8 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="#" target="_blank">GitHub</a>
-                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View Project-3 on GitHub, opens in new tab">GitHub</a>            <!-- Change the aria-label after adding projects -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View live demo of Project-3, opens in new tab">Live Demo</a>          <!-- Change the aria-label after adding projects -->
                     </div>
                 </div>
             </div>
@@ -232,7 +232,7 @@
         <div class="certifications-grid">
 
             <div class="certification-card">
-                <div class="certification-icon"><img src="assets/icons/certificate-svgrepo-com.svg" alt="certification"></div>
+                <div class="certification-icon"><img src="assets/icons/certificate-svgrepo-com.svg" alt="certification icon"></div>
                 <div class="certification-info">
                     <h3>Full-Stack Developer Bootcamp</h3>
                     <p class="certification-issuer">Udemy</p>
@@ -240,7 +240,7 @@
             </div>
 
             <div class="certification-card">
-                <div class="certification-icon"><img src="assets/icons/certificate-svgrepo-com.svg" alt="certification"></div>
+                <div class="certification-icon"><img src="assets/icons/certificate-svgrepo-com.svg" alt="certification icon"></div>
                 <div class="certification-info">
                     <h3>Responsive Web Design</h3>
                     <p class="certification-issuer">Scrimba</p>
@@ -248,7 +248,7 @@
             </div>
 
             <div class="certification-card">
-                <div class="certification-icon"><img src="assets/icons/certificate-svgrepo-com.svg" alt="certification"></div>
+                <div class="certification-icon"><img src="assets/icons/certificate-svgrepo-com.svg" alt="certification icon"></div>
                 <div class="certification-info">
                     <h3>JAIIB</h3>
                     <p class="certification-issuer">Indian Institute of Banking & Finance</p>
@@ -268,20 +268,20 @@
         <p class="contact-subtext">I am currently open to front-end developer roles across the West Midlands. Feel free to reach out!</p>
 
         <div class="contact-links">
-            <a href="mailto:syed.khanaliya@gmail.com" class="contact-item">
-                <img src="assets/icons/new-email-black-back-envelope-symbol-of-interface-svgrepo-com.svg" alt="Email">
+            <a href="mailto:syed.khanaliya@gmail.com" class="contact-item" aria-label="Send email to Aliya Khan">
+                <img src="assets/icons/new-email-black-back-envelope-symbol-of-interface-svgrepo-com.svg">
                 <span class="contact-label">Email</span>
                 <span class="contact-value">syed.khanaliya@gmail.com</span>
             </a>
-            <a href="https://github.com/khan-aliya" target="_blank" class="contact-item">
-                <img src="assets/icons/github-svgrepo-com.svg" alt="GitHub">
+            <a href="https://github.com/khan-aliya" target="_blank" class="contact-item" aria-label="Visit Aliya Khan's GitHub profile, opens in new tab" rel="noopener noreferrer">
+                <img src="assets/icons/github-svgrepo-com.svg">
                 <span class="contact-label">GitHub</span>
                 <span class="contact-value">github.com/khan-aliya</span>
             </a>
-            <a href="#" target="_blank" class="contact-item">
-                <img src="assets/icons/linkedin-svgrepo-com.svg" alt="LinkedIn">
+            <a href="https://www.linkedin.com/in/aliya-khan-computer-science" target="_blank" class="contact-item" aria-label="Visit Aliya Khan's LinkedIn profile, opens in new tab" rel="noopener noreferrer">
+                <img src="assets/icons/linkedin-svgrepo-com.svg">
                 <span class="contact-label">LinkedIn</span>
-                <span class="contact-value">Add your LinkedIn URL</span>
+                <span class="contact-value">linkedin.com/in/aliya-khan-computer-science</span>
             </a>
         </div>
 

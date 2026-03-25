@@ -48,3 +48,10 @@ AllNavLinks.forEach(link => {
         navLinks.classList.remove('open');
     });
 });
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+    const isOpen = hamburger.classList.contains('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+});
