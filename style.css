@@ -132,7 +132,7 @@ p {
     display: none;
 }
 
-.nav-links ul {
+.nav-links {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -943,14 +943,14 @@ p {
         gap: 1.5rem;      
         display: none;
     }
-    .nav-links ul {
+    .nav-links {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: end;
         padding: 2rem;
         flex: 1;
     }
-    .nav-links ul li a {
+    .nav-links li a {
         font-size: 1.25rem;
         font-weight: 300;
     }
