@@ -52,15 +52,10 @@ AllNavLinks.forEach(link => {
     });
 });
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navLinks.classList.toggle('open');
-    const isOpen = hamburger.classList.contains('open');
-    hamburger.setAttribute('aria-expanded', isOpen);
-});
+
 
 // =========================
-// Copyright year
+// Dynamic copyright year
 // =========================
 
 document.querySelector('.contact-footer-note span').textContent = new Date().getFullYear();
