@@ -233,7 +233,16 @@ p {
     line-height: 1.8;
     margin-bottom: 2rem;
 }
-
+.hero-status {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background-color: var(--accent-light);
+    border: 1px solid #C7CCFA;
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin-bottom: 1.5rem;
+}
 .hero-buttons {
     display: flex;
     gap: 1rem;
