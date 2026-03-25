@@ -895,8 +895,6 @@ p {
 
 @media (max-width: 768px) {
 
-    /* Navbar */
-
     .hamburger {
         display: flex;
         flex-direction: column;
@@ -936,29 +934,31 @@ p {
         width: 100%;
         height: calc(100vh - 70px);
         background-color: var(--bg-card);
-        border-bottom: 1px solid var(--border);
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 2.5rem;
         padding: 2rem;
-        gap: 2rem;
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        pointer-events: none;
     }
+
+    .nav-links.open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+
     .nav-links li a {
         font-size: 1.25rem;
-        font-weight: 300;
-    }
-    .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        left: 0;
+        font-weight: 400;
     }
 
     /* Hero */
-
     .hero-container {
         padding: 3rem;
         flex-direction: column;
@@ -969,13 +969,16 @@ p {
     .hero-text p:last-of-type {
         margin: 0 auto 1rem;
     }
+
     .hero-text h1 {
         font-size: 3.5rem;
     }
+
     .hero-text h2 {
         font-size: 1.25rem;
         margin-bottom: 1.25rem;
     }
+
     .hero-buttons {
         justify-content: center;
     }
@@ -985,8 +988,7 @@ p {
         height: 260px;
     }
 
-    /* Utilities - buttons */
-
+    /* Utilities */
     .btn {
         padding: 0.5rem 1.5rem;
         font-size: 0.85rem;
@@ -1001,13 +1003,11 @@ p {
         font-size: 1.75rem;
         margin-bottom: 3rem;
     }
-    :root {
 
-        /* Spacing */
-    --section-padding: 30px 0 50px;
+    :root {
+        --section-padding: 30px 0 50px;
     }
 
-    /* Footer - Contact */
     .contact-container h2 {
         font-size: 1.75rem;
     }
