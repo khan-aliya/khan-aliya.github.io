@@ -27,6 +27,10 @@
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
 
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
@@ -71,7 +75,23 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="" alt="Aliya Khan - Front-End Developer">
+                <img src="" alt="Aliya Khan - Front-End Developer" loading="lazy">              <!-- ### Compress your profile photo before adding it
+
+When you add your photo, run it through **[squoosh.app](https://squoosh.app)** first:
+
+- Open the site
+- Drag your photo in
+- On the right side select `WebP` format
+- Set quality to around `80%`
+- Download the compressed version
+
+Target file size: **under 150kb**. A typical phone photo is 3–5mb — that's 20x too large for a web page. Compressing it makes a massive difference to how fast your page loads.
+
+Then save it as:
+```
+assets/
+└── images/
+    └── aliya.webp "Make sure to chnage the name in other places in head also"-->
             </div>
         </div>
     </section>
