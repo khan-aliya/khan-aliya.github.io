@@ -300,16 +300,11 @@ p {
 }
 
 /* Hover — show back face */
-.profile-card:hover .profile-front {
-  opacity: 0;
-}
+
 .profile-card.flipped .profile-front {
   opacity: 0;
 }
-.profile-card:hover .profile-back {
-  opacity: 1;
-  z-index: 3;
-}
+
 .profile-card.flipped .profile-back {
   opacity: 1;
   z-index: 3;
