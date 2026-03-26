@@ -46,9 +46,9 @@
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <link
       rel="icon"
-      type="image/png"
+      type="image/webp"
       sizes="32x32"
-      href="assets/images/favicon-32x32.png"
+      href="assets/images/favicon-32x32.webp"
     />
 
     <!-- Preconnect to Google Fonts -->
@@ -112,14 +112,50 @@
           </div>
         </div>
         <div class="hero-image">
-          <img
-            src="https://ui-avatars.com/api/?name=Aliya+Khan&background=5B6EE8&color=fff&size=380"
-            alt="Aliya Khan - Front-End Developer"
-            loading="lazy"
-            width="380"
-            height="380"
-          />
-          <!-- ### Compress your profile photo before adding it
+          <div class="profile-card" id="profileCard">
+            <div class="profile-front">
+              <img
+                src="https://ui-avatars.com/api/?name=Aliya+Khan&background=5B6EE8&color=fff&size=380"
+                alt="Aliya Khan — Front-End Developer"
+                loading="lazy"
+                width="380"
+                height="380"
+              />
+            </div>
+            <div class="profile-back">
+              <h3>Get In Touch</h3>
+              <div class="flip-contact-links">
+                <a
+                  href="mailto:syed.khanaliya@gmail.com"
+                  aria-label="Send email to Aliya Khan"
+                >
+                  <img src="assets/icons/mail.svg" alt="" />
+                  <span>syed.khanaliya@gmail.com</span>
+                </a>
+                <a
+                  href="https://github.com/khan-aliya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit GitHub profile, opens in new tab"
+                >
+                  <img src="assets/icons/github.svg" alt="" />
+                  <span>github.com/khan-aliya</span>
+                </a>
+                <a
+                  href="https://linkedin.com/in/your-url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit LinkedIn profile, opens in new tab"
+                >
+                  <img src="assets/icons/linkedin.svg" alt="" />
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+              <p class="flip-hint">Click to flip back</p>
+            </div>
+          </div>
+        </div>
+        <!-- ### Compress your profile photo before adding it
 
 When you add your photo, run it through **[squoosh.app](https://squoosh.app)** first:
 
@@ -136,7 +172,6 @@ Then save it as:
 assets/
 └── images/
     └── aliya.webp "Make sure to chnage the name in other places in head also"-->
-        </div>
       </div>
     </section>
 
@@ -147,30 +182,27 @@ assets/
         <h2>Skills</h2>
         <div class="skills-grid">
           <div class="skill-card">
-            <img src="assets/icons/html5-alt-svgrepo-com.svg" alt="HTML5" />
+            <img src="assets/icons/html5.svg" alt="HTML5" />
             <p>HTML5</p>
           </div>
           <div class="skill-card">
-            <img src="assets/icons/css-svgrepo-com.svg" alt="CSS3" />
+            <img src="assets/icons/css3.svg" alt="CSS3" />
             <p>CSS3</p>
           </div>
           <div class="skill-card">
-            <img
-              src="assets/icons/javascript-svgrepo-com (1).svg"
-              alt="JavaScript"
-            />
+            <img src="assets/icons/javascript.svg" alt="JavaScript" />
             <p>JavaScript</p>
           </div>
           <div class="skill-card">
-            <img src="assets/icons/reactjs-fill-svgrepo-com.svg" alt="React" />
+            <img src="assets/icons/react.svg" alt="React" />
             <p>React</p>
           </div>
           <div class="skill-card">
-            <img src="assets/icons/git-branch-svgrepo-com.svg" alt="Git" />
+            <img src="assets/icons/git.svg" alt="Git" />
             <p>Git</p>
           </div>
           <div class="skill-card">
-            <img src="assets/icons/github-alt-svgrepo-com.svg" alt="GitHub" />
+            <img src="assets/icons/github.svg" alt="GitHub" />
             <p>GitHub</p>
           </div>
         </div>
@@ -379,7 +411,7 @@ assets/
           <div class="certification-card">
             <div class="certification-icon">
               <img
-                src="assets/icons/certificate-svgrepo-com.svg"
+                src="assets/icons/certificate.svg"
                 alt="certification icon"
               />
             </div>
@@ -392,7 +424,7 @@ assets/
           <div class="certification-card">
             <div class="certification-icon">
               <img
-                src="assets/icons/certificate-svgrepo-com.svg"
+                src="assets/icons/certificate.svg"
                 alt="certification icon"
               />
             </div>
@@ -405,7 +437,7 @@ assets/
           <div class="certification-card">
             <div class="certification-icon">
               <img
-                src="assets/icons/certificate-svgrepo-com.svg"
+                src="assets/icons/certificate.svg"
                 alt="certification icon"
               />
             </div>
