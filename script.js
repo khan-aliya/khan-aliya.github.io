@@ -62,32 +62,56 @@ document.querySelector(".contact-footer-note span").textContent =
 // Profile card flip
 // ========================
 
+// const profileCard = document.getElementById("profileCard");
+
+// if (profileCard) {
+//   let isLocked = false;
+
+//   profileCard.addEventListener("mouseenter", () => {
+//     if (!isLocked) {
+//       profileCard.classList.add("flipped");
+//     }
+//   });
+
+//   profileCard.addEventListener("mouseleave", () => {
+//     if (!isLocked) {
+//       profileCard.classList.remove("flipped");
+//     }
+//   });
+
+//   profileCard.addEventListener("click", (e) => {
+//     if (e.target.closest(".flip-icons a")) {
+//       return;
+//     }
+//     isLocked = !isLocked;
+//     if (isLocked) {
+//       profileCard.classList.add("flipped");
+//     } else {
+//       profileCard.classList.remove("flipped");
+//     }
+//   });
+// }
 const profileCard = document.getElementById("profileCard");
 
 if (profileCard) {
   let isLocked = false;
+  const isTouch = "ontouchstart" in window;
 
-  profileCard.addEventListener("mouseenter", () => {
-    if (!isLocked) {
-      profileCard.classList.add("flipped");
-    }
-  });
+  if (!isTouch) {
+    // Desktop only
+    profileCard.addEventListener("mouseenter", () => {
+      if (!isLocked) profileCard.classList.add("flipped");
+    });
 
-  profileCard.addEventListener("mouseleave", () => {
-    if (!isLocked) {
-      profileCard.classList.remove("flipped");
-    }
-  });
+    profileCard.addEventListener("mouseleave", () => {
+      if (!isLocked) profileCard.classList.remove("flipped");
+    });
+  }
 
   profileCard.addEventListener("click", (e) => {
-    if (e.target.closest(".flip-icons a")) {
-      return;
-    }
+    if (e.target.closest(".flip-icons a")) return;
+
     isLocked = !isLocked;
-    if (isLocked) {
-      profileCard.classList.add("flipped");
-    } else {
-      profileCard.classList.remove("flipped");
-    }
+    profileCard.classList.toggle("flipped", isLocked);
   });
 }
