@@ -605,6 +605,9 @@ p {
   border-radius: var(--radius-md);
   padding: 2rem;
   transition: box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .education-card:hover,
@@ -612,65 +615,21 @@ p {
   box-shadow: var(--shadow-md);
 }
 
-.education-header {
-  margin-bottom: 1.25rem;
-}
-
-.education-header h3 {
+.education-card h3 {
   font-size: 1.15rem;
   color: var(--text-heading);
-  margin-bottom: 0.35rem;
 }
 
-.education-header .institution {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 0.25rem;
-}
-
-.education-header .grade {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-body);
-  margin-bottom: 0.2rem;
-}
-
-.education-header .recognition {
-  display: inline-block;
-  font-size: 0.78rem;
+.education-card .institution {
+  font-size: 0.92rem;
   font-weight: 500;
   color: var(--accent);
-  background-color: var(--accent-light);
-  border: 1px solid #c7ccfa;
-  border-radius: 20px;
-  padding: 3px 10px;
-  margin-bottom: 0.35rem;
 }
 
-.education-header .duration {
-  display: block;
+.education-card .grade {
   font-size: 0.85rem;
   color: var(--text-muted);
   font-weight: 500;
-}
-
-.education-points {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding-left: 1.25rem;
-  list-style: disc;
-}
-
-.education-points li {
-  font-size: 0.92rem;
-  color: var(--text-body);
-  line-height: 1.7;
-}
-
-.education-points li::marker {
-  color: var(--accent);
 }
 
 /* ========================
