@@ -263,13 +263,137 @@ p {
   align-items: center;
 }
 
-.hero-image img {
+.profile-card {
   width: 380px;
   height: 380px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.profile-front,
+.profile-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: opacity 0.4s ease;
+}
+
+.profile-front {
+  opacity: 1;
+  z-index: 2;
+}
+
+.profile-back {
+  opacity: 0;
+  z-index: 1;
+  background-color: var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  border: 4px solid var(--accent-light);
+}
+
+/* Hover — show back face */
+.profile-card:hover .profile-front {
+  opacity: 0;
+}
+.profile-card.flipped .profile-front {
+  opacity: 0;
+}
+.profile-card:hover .profile-back {
+  opacity: 1;
+  z-index: 3;
+}
+.profile-card.flipped .profile-back {
+  opacity: 1;
+  z-index: 3;
+}
+.profile-front img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid var(--accent-light);
-  box-shadow: var(--shadow-md);
+  display: block;
+}
+
+.flip-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  background: linear-gradient(transparent, rgba(91, 110, 232, 0.85));
+  border-radius: 0 0 50% 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.flip-overlay p {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+.profile-front:hover .flip-overlay {
+  opacity: 1;
+}
+
+.flip-back-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.flip-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+.flip-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--accent-hover);
+  transition: all 0.2s ease;
+}
+
+.flip-icons a:hover,
+.flip-icons a:focus-visible {
+  transform: translateY(-2px);
+}
+
+.flip-icons img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.flip-hint {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.03em;
+  pointer-events: none;
 }
 
 /* ========================
@@ -931,10 +1055,10 @@ p {
 
   /* Hero */
   .hero-container {
-    padding: 3rem;
+    padding: 2rem;
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .hero-text p:last-of-type {
@@ -954,9 +1078,47 @@ p {
     justify-content: center;
   }
 
-  .hero-image img {
+  .hero-social {
+    justify-content: center;
+  }
+
+  /* Profile card */
+  .profile-card {
     width: 260px;
     height: 260px;
+  }
+
+  .profile-front img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .profile-back {
+    width: 260px;
+    height: 260px;
+    gap: 1rem;
+  }
+
+  .flip-icons {
+    gap: 1.25rem;
+  }
+
+  .flip-icons a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .flip-icons img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .flip-back-title {
+    font-size: 0.95rem;
+  }
+
+  .flip-hint {
+    font-size: 0.68rem;
   }
 
   /* Utilities */
@@ -996,18 +1158,51 @@ p {
     font-size: 1.2rem;
   }
 
-  .hero-image img {
-    width: 200px;
-    height: 200px;
-  }
-
   .hero-buttons {
     flex-direction: column;
     align-items: center;
   }
 
-  /* Utilities - buttons */
+  /* Profile card*/
+  .profile-card {
+    width: 200px;
+    height: 200px;
+  }
 
+  .profile-front img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-back {
+    width: 200px;
+    height: 200px;
+    gap: 0.75rem;
+  }
+
+  .flip-icons {
+    gap: 1rem;
+  }
+
+  .flip-icons a {
+    width: 34px;
+    height: 34px;
+  }
+
+  .flip-icons img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .flip-back-title {
+    font-size: 0.85rem;
+  }
+
+  .flip-hint {
+    display: none;
+  }
+
+  /* Utilities */
   .btn {
     padding: 0.5rem 1.2rem;
     font-size: 0.8rem;
@@ -1022,8 +1217,8 @@ p {
     font-size: 1.5rem;
     margin-bottom: 2.5rem;
   }
+
   :root {
-    /* Spacing */
     --section-padding: 20px 0 40px;
   }
 
@@ -1034,34 +1229,39 @@ p {
     padding: 1.25rem;
   }
 
-  /* Footer - Contact */
-
+  /* Footer */
   .contact {
     padding-top: 20px;
   }
+
   .contact-item {
     padding: 0.6rem 1rem;
   }
+
   .contact-container h2 {
     font-size: 1.5rem;
   }
+
   .contact-subtext {
     font-size: 0.875rem;
   }
+
   .contact-value {
     font-size: 0.82rem;
   }
+
   .contact-footer-note {
     font-size: 0.75rem;
   }
+
   .contact-links {
     max-width: 100%;
   }
+
   .contact-item {
     flex-wrap: wrap;
   }
 }
-
 /* ========================
    14. REDUCED MOTION
    ======================== */
